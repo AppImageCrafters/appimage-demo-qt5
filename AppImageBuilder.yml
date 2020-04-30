@@ -82,7 +82,20 @@ AppDir:
     - qml-module-qtquick-templates2
     - qml-module-qtquick-window2
     - qml-module-qtquick2
-    exclude: []
+    exclude:
+      - hicolor-icon-theme
+      - sound-theme-freedesktop
+      - perl
+      - perl-base
+      - kwayland-data
+      - libwacom2
+      - libasound2
+      - breeze
+      - breeze-icon-theme
+      - breeze-cursor-theme
+      - kwin-style-breeze
+      - kde-style-breeze
+      - plasma-integration
   files:
     exclude:
     - usr/share/man

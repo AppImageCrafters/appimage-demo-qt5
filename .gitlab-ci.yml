@@ -18,5 +18,5 @@ build-amd64:
     artifacts:
       paths:
         - '*.AppImage*'
-      expire_in: 1 year
+      expire_in: 1 week
 
