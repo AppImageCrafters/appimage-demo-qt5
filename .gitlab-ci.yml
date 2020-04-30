@@ -1,13 +1,22 @@
 build-amd64:
     image: appimagecrafters/appimage-builder
     before_script:
-      - apt-get update
-      - apt-get install -y git wget libgdk-pixbuf2.0-dev zsync
+      # update appimage-builder 
       - pip3 install --upgrade git+https://www.opencode.net/azubieta/appimagecraft.git
+      
+      # app build requirements
+      - apt-get update
+      - apt-get install -y git wget 
+      - echo 'deb http://archive.neon.kde.org/user/ bionic main' > /etc/apt/sources.list.d/neon.list
+      - wget -qO - https://archive.neon.kde.org/public.key | apt-key add -
+      - apt-get update
+      - apt-get install -y qt5-default cmake 
     script:
+      - cmake . -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr
+      - make install DESTDIR=AppDir
       - appimage-builder --skip-test
     artifacts:
       paths:
         - '*.AppImage*'
-      expire_in: 1 week
+      expire_in: 1 year
 
