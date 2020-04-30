@@ -1,0 +1,13 @@
+build-amd64:
+    image: appimagecrafters/appimage-builder
+    before_script:
+      - apt-get update
+      - apt-get install -y git wget libgdk-pixbuf2.0-dev zsync
+      - pip3 install --upgrade git+https://www.opencode.net/azubieta/appimagecraft.git
+    script:
+      - appimage-builder --skip-test
+    artifacts:
+      paths:
+        - '*.AppImage*'
+      expire_in: 1 week
+
