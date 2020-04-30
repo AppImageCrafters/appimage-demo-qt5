@@ -77,7 +77,6 @@ AppDir:
     - libxrender1
     - libxshmfence1
     - libxxf86vm1
-    - plasma-integration
     - qml-module-qtquick-controls2
     - qml-module-qtquick-templates2
     - qml-module-qtquick-window2
