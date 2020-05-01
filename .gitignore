@@ -71,3 +71,12 @@ Thumbs.db
 *.dll
 *.exe
 
+
+# Build
+build
+cmake-build-*
+
+
+# vscode
+
+.vscode
