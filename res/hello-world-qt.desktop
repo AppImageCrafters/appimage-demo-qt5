@@ -5,6 +5,6 @@ Name=Qt AppImage Template
 Comment=Qt Quick Controls 2 Application
 TryExec=qt-appimage-template
 Exec=qt-appimage-template
-Icon=QtQuickControls2Application
+Icon=hello-world-qt
 MimeType=image/x-foo;
 Categories=Utility;
