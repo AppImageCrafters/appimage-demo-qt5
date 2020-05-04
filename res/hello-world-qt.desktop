@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Qt AppImage Template
+Comment=Qt Quick Controls 2 Application
+TryExec=qt-appimage-template
+Exec=qt-appimage-template
+Icon=QtQuickControls2Application
+MimeType=image/x-foo;
+Categories=Utility;
