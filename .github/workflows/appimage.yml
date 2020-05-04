@@ -22,7 +22,7 @@ jobs:
       - name: build
         run: make -j`nproc`  install DESTDIR=AppDir
       - name: Build AppImage
-        uses: AppImageCrafters/build-appimage-action@v0.2
+        uses: AppImageCrafters/build-appimage-action@master
         with:
           recipe: AppImageBuilder.yml
       - uses: actions/upload-artifact@v2
