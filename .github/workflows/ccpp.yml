@@ -7,17 +7,18 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  build-appimage:
 
     runs-on: ubuntu-latest
+    container:
+      image: appimagecrafters/appimage-builder
 
     steps:
     - uses: actions/checkout@v2
     - name: install dependencies
-      run: sudo apt-get install -y qt5-default qtdeclarative5-dev cmake
-    - name: configure
-      run: cmake . -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr
-    - name: make
-      run: make -j`nproc` 
-    - name: install
-      run: make install DESTDIT=AppDir
+      run: apt-get install -y qt5-default qtdeclarative5-dev cmake
+    - name: build-appimage
+      run: appimage-builder --skip-test
+    - uses: actions/upload-artifact@v2
+      with:
+        path: *.AppImage*
