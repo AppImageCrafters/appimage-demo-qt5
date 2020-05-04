@@ -1,8 +1,4 @@
 version: 1
-script:
-  - cmake . -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr
-  - make install DESTDIR=AppDir
-
 AppDir:
   path: AppDir
   app_info:
