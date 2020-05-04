@@ -14,6 +14,7 @@ build-amd64:
     script:
       - cmake . -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr
       - make install DESTDIR=AppDir
+      - export UPDATE_INFO="zsync|https://www.opencode.net/azubieta/qt-hello-world/-/jobs/artifacts/master/raw/HelloWorld-latest-x86_64.AppImage.zsync?job=build-amd64"
       - appimage-builder --skip-test
     artifacts:
       paths:

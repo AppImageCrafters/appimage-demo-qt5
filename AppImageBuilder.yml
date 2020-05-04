@@ -125,5 +125,5 @@ AppDir:
       use_host_x: true
 AppImage:
   arch: x86_64
-  update-information: zsync|https://www.opencode.net/azubieta/qt-hello-world/-/jobs/artifacts/master/raw/HelloWorld-latest-x86_64.AppImage.zsync?job=build-amd64
+  update-information: !ENV ${UPDATE_INFO}
   sign-key: None
