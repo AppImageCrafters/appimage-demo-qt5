@@ -10,24 +10,23 @@ jobs:
   build-appimage:
 
     runs-on: ubuntu-latest
-    container:
-      image: appimagecrafters/appimage-builder
 
     steps:
       - uses: actions/checkout@v2
       - name: install dependencies
         run: |
-          apt-get update
-          apt-get install -y qt5-default qtdeclarative5-dev cmake
+          sudo apt-get update
+          sudo apt-get install -y qt5-default qtdeclarative5-dev cmake
       - name: configure
         run: cmake . -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr
       - name: build
-        run: make -j`nproc`
-      - name: pack
-        run: |
-          make install DESTDIR=AppDir
-          export export UPDATE_INFO="gh-releases-zsync|AppImageCrafters|qt-hello-world|latest|*.AppImage.zsync"
-          appimage-builder --skip-test
+        run: make -j`nproc`  install DESTDIR=AppDir
+      - name: Build AppImage
+        uses: AppImageCrafters/build-appimage-action@master
+        env:
+          UPDATE_INFO: gh-releases-zsync|AppImageCrafters|qt-hello-world|latest|*x86_64.AppImage.zsync
+        with:
+          recipe: AppImageBuilder.yml
       - uses: actions/upload-artifact@v2
         with:
           name: AppImage

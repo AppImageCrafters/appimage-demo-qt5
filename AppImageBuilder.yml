@@ -2,9 +2,9 @@ version: 1
 AppDir:
   path: AppDir
   app_info:
-    id: net.opencode.azubieta.hello-qt-world
-    name: HelloWorld
-    icon: application-x-executable
+    id: hello-world-qt
+    name: Hello World
+    icon: hello-world-qt
     version: latest
     exec: usr/bin/hello-qt-world
     exec_args: $@
