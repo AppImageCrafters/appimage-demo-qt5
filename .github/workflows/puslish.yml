@@ -27,7 +27,7 @@ jobs:
       - name: pack
         run: |
           make install DESTDIR=AppDir
-          export export UPDATE_INFO="gh-releases-zsync|AppImageCrafters|qt-hello-world|latest|*.AppImage.zsync"
+          export export UPDATE_INFO="gh-releases-zsync|AppImageCrafters|appimage-demo-qt5|latest|*.AppImage.zsync"
           appimage-builder --skip-test
       - name: Create Release
         id: create_release

@@ -24,7 +24,7 @@ jobs:
       - name: Build AppImage
         uses: AppImageCrafters/build-appimage-action@master
         env:
-          UPDATE_INFO: gh-releases-zsync|AppImageCrafters|qt-hello-world|latest|*x86_64.AppImage.zsync
+          UPDATE_INFO: gh-releases-zsync|AppImageCrafters|appimage-demo-qt5|latest|*x86_64.AppImage.zsync
         with:
           recipe: AppImageBuilder.yml
       - uses: actions/upload-artifact@v2

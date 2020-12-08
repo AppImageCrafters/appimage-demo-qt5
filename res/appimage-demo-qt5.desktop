@@ -1,10 +1,10 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=Qt AppImage Template
+Name=AppImage Demo Qt5
 Comment=Qt Quick Controls 2 Application
-TryExec=qt-appimage-template
-Exec=qt-appimage-template
-Icon=hello-world-qt
+TryExec=appimage-demo-qt5
+Exec=appimage-demo-qt5
+Icon=appimage-demo-qt5
 MimeType=image/x-foo;
 Categories=Utility;

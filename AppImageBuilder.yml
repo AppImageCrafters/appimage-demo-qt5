@@ -2,15 +2,12 @@ version: 1
 AppDir:
   path: AppDir
   app_info:
-    id: hello-world-qt
-    name: Hello World
-    icon: hello-world-qt
+    id: appimage-demo-qt5
+    name: AppImage Demo Qt5
+    icon: appimage-demo-qt5
     version: latest
-    exec: usr/bin/hello-qt-world
+    exec: usr/bin/appimage-demo-qt5
     exec_args: $@
-  runtime:
-    env:
-      APPDIR_LIBRARY_PATH: $APPDIR/usr/lib/x86_64-linux-gnu:$APPDIR/lib/x86_64-linux-gnu
   apt:
     arch: amd64
     sources:
