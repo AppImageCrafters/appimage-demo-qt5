@@ -1,3 +1,4 @@
 # appimage-demo-qt5
 
-Qt5 demo project for AppImage creation demonstrations
+Simple Qt5 project to demonstrate how to pack a Qt5 application as an AppImage using appimage-builder and GithubActions
+
